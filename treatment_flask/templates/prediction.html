@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results - Treatment Prediction App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Treatment Prediction Results</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Click to Get Predictions</h2>
+            <form method="POST">
+                <button type="submit" class="btn">Get Prediction</button>
+            </form>
+
+            {% if tables %}
+                <h3>Prediction Data</h3>
+                <div class="table-container">
+                    {{ tables|safe }}
+                </div>
+            {% else %}
+                <p>No prediction data available. Please try again later.</p>
+            {% endif %}
+
+            <!-- Go Back Button -->
+            <form action="{{ url_for('index') }}" method="GET">
+                <button type="submit" class="btn">Go Back to Homepage</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

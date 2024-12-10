@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Questionnaire</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1 id="data">Data Collection Questionnaire for HIV/AIDS Treatment Monitoring</h1>
+    <form class="questionnaire" method="POST">
+        <label for="facility">Facility:</label>
+        <select name="facility" id="facility">
+            <option value="Akamkpa General Hospital">Akamkpa General Hospital</option>
+            <option value="Phc Aningeje">Phc Aningeje</option>
+            <option value="Phc Mma Effa">Phc Mma Effa</option>
+            <option value="Phc Mfamosing">Phc Mfamosing</option>
+            <option value="Akamkpa General Hospital">Akamkpa General Hospital</option>
+            <option value="Akamkpa General Hospital">Akamkpa General Hospital</option>
+        </select><br><br>
+
+        <label for="hospital_number">Hospital Number:</label>
+        <input type="text" name="hospital_number" id="hospital_number" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" min="0" max="120" required><br><br>
+
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender">
+            <option value="MALE">Male</option>
+            <option value="FEMALE">Female</option>
+        </select><br><br>
+
+        <label for="education_level">Education Level:</label>
+        <select name="education_level" id="education_level">
+            <option value="NO EDUCATION">No Education</option>
+            <option value="PRIMARY">Primary</option>
+            <option value="SECONDARY">Secondary</option>
+            <option value="HIGHER EDUCATION">Higher Education</option>
+        </select><br><br>
+
+        <label for="marital_status">Marital Status:</label>
+        <select name="marital_status" id="marital_status">
+            <option value="SINGLE">Single</option>
+            <option value="MARRIED">Married</option>
+            <option value="DIVORCE">Divorced</option>
+            <option value="WIDOWED">Widowed</option>
+        </select><br><br>
+
+        <label for="art_duration">Duration on ART (years):</label>
+        <input type="number" name="art_duration" id="art_duration" min="0"><br><br>
+
+        <label for="changed_regimen">Changed ART Regimen?</label>
+        <select name="changed_regimen" id="changed_regimen">
+            <option value="NO">No</option>
+            <option value="YES">Yes</option>
+        </select><br><br>
+
+        <label for="side_effects">Experienced Side Effects?</label>
+        <select name="side_effects" id="side_effects">
+            <option value="NO">No</option>
+            <option value="YES">Yes</option>
+        </select><br><br>
+
+        <label for="adherence">Adherence to Medication:</label>
+        <select name="adherence" id="adherence">
+            <option value="RARELY">Rarely</option>
+            <option value="SOMETIMES">Sometimes</option>
+            <option value="ALWAYS">Always</option>
+        </select><br><br>
+
+        <label for="missed_doses">Missed Doses in a Month:</label>
+        <select name="missed_doses" id="missed_doses">
+            <option value="0">0</option>
+            <option value="1-2">1-2</option>
+            <option value="3-5">3-5</option>
+            <option value=">5">>5</option>
+        </select><br><br>
+
+        <label for="base_line_viral_load">Baseline Viral Load:</label>
+        <select name="base_line_viral_load" id="base_line_viral_load">
+            <option value="I DON'T KNOW">I don't know</option>
+            <option value="<1000">&lt;1000</option>
+            <option value=">1000">&gt;1000</option>
+        </select><br><br>
+
+        <label for="current_viral_load">Current Viral Load:</label>
+        <select name="current_viral_load" id="current_viral_load">
+            <option value="I DON'T KNOW">I don't know</option>
+            <option value="<1000">&lt;1000</option>
+            <option value=">1000">&gt;1000</option>
+        </select><br><br>
+
+        <label for="most_recent_viral_load">Most Recent Viral Load:</label>
+        <select name="most_recent_viral_load" id="most_recent_viral_load">
+            <option value="I DON'T KNOW">I don't know</option>
+            <option value="<1000">&lt;1000</option>
+            <option value=">1000">&gt;1000</option>
+        </select><br><br>
+
+        <label for="first_cd4">First CD4 Count:</label>
+        <select name="first_cd4" id="first_cd4">
+            <option value="<200">&lt;200</option>
+            <option value=">200">&gt;200</option>
+        </select><br><br>
+
+        <label for="current_cd4">Current CD4 Count:</label>
+        <select name="current_cd4" id="current_cd4">
+            <option value="<200">&lt;200</option>
+            <option value=">200">&gt;200</option>
+        </select><br><br>
+
+        <label for="smoking">Do you smoke?</label>
+        <select name="smoking" id="smoking">
+            <option value="NO">No</option>
+            <option value="YES">Yes</option>
+        </select><br><br>
+
+        <label for="alcohol">Do you consume alcohol?</label>
+        <select name="alcohol" id="alcohol">
+            <option value="NO">No</option>
+            <option value="YES">Yes</option>
+        </select><br><br>
+
+        <label for="recreational_drugs">Do you use recreational drugs?</label>
+        <select name="recreational_drugs" id="recreational_drugs">
+            <option value="NO">No</option>
+            <option value="YES">Yes</option>
+        </select><br><br>
+
+        <label for="experience">Psychosocial Experience:</label>
+        <select name="experience" id="experience">
+            <option value="Depression">Depression</option>
+            <option value="Anxiety">Anxiety</option>
+            <option value="Stress related to stigma or discrimination">Stress related to stigma or discrimination</option>
+            <option value="None">None</option>
+        </select><br><br>
+
+        <label for="clinic_appointments">Clinic Appointments:</label>
+        <select name="clinic_appointments" id="clinic_appointments">
+            <option value="Regularly">Regularly</option>
+            <option value="Occasionally">Occasionally</option>
+            <option value="Rarely">Rarely</option>
+        </select><br><br>
+
+        <label for="barriers">Barriers to Healthcare:</label>
+        <select name="barriers" id="barriers">
+            <option value="NO">No</option>
+            <option value="YES">Yes</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/">Back to Homepage</a>
+</body>
+</html>
